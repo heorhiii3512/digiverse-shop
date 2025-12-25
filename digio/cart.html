@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div id="overlay"></div>
     <header>
         <div class="upper">
             <div class="logo"></div>
@@ -20,11 +21,51 @@
         <div class="mid">
             <div class="cartlist">
                 <div class="cartmain">
-                    Ваш кошик порожній
+                    <div id="cart-items"></div>
+                    <p id="cart-total"></p>
+                    <p class="submit-buy">Оформити замовлення</p>
+                    <div class="ordering-submit">
+                        <form>
+                            <h2 class="main-title">Деталі замовлення</h2>
+                            <div class="blockcont">
+                                <h3>Контактні дані</h3>
+                                <div class="block">
+                                    <div class="blockcont">
+                                        <label class="txt" for="name">Ім'я:</label>
+                                        <label class="txt" for="surname">Прізвище:</label>
+                                        <label class="txt" for="tel">Номер телефону:</label>
+                                    </div>
+                                    <div class="blockcont">
+                                        <input class="type-in name" type="text" name="name" required>
+                                        <input class="type-in surname" type="text" name="surname" required>
+                                        <input class="type-in num" type="tel" name="phone" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Доставка</h3>
+                            <select name="delivery">
+                                <option value="nova-poshta">Нова Пошта</option>
+                                <option value="ukr-poshta">Укрпошта</option>
+                            </select>
+                            <input type="text" name="address" placeholder="Місто та відділення">
+
+                            <h3>Оплата</h3>
+                            <div class="block">
+                                <select name="payment">
+                                    <option value="card">Карткою онлайн</option>
+                                    <option value="cash">При отриманні</option>
+                                </select>
+                            </div>
+                            <button class="buy-submit-button" type="submit">Підтвердити замовлення</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-
+        <div class="message">
+            <div class="block" id="info-block"></div>
+            <button class="ok-button">Ok</button>
+        </div>
     </main>
     <footer>
         <div class="downst">
