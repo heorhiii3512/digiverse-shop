@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <header>
+        <div class="upper">
+            <div class="logo"></div>
+            <div class="shopname">DIGIVERSE</div>
+            <form id="searchForm" class="search-form" role="search">
+                <input id="searchInput" class="search-input" type="search" placeholder="Пошук" aria-label="search">
+                <button class="search-btn" type="submit">Знайти</button>
+            </form>
+            <div class="upperbutton favbutton">
+                <img src="images/star.svg" alt="wishlist">
+            </div>
+            <div class="upperbutton cartbutton">
+                <img src="images/shopping-bag.svg" alt="cart">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="block" id="inner-main">
+            <div class="main-container">
+                <div class="sidetools">
+                    <button id="allProducts">УСІ ТОВАРИ</button>
+                    <button id="newProducts">НОВИНКИ</button>
+                    <button id="actionAndSales">АКЦІЇ</button>
+                </div>
+                <div class="productList">
+                    <div class="blockcont" id="main-block">
+                        <p class="rectext" id="recomend">Рекомендації</p>
+                        <div class="block" id="sugestions"></div>
+                        <div class="spliter" id="delim"></div>
+                        <p class="rectext" id="all-products">Усі товари</p>
+                        <div class="block" id="productcontainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="message">
+            <p id="message-text">Товар додано у кошик</p>  
+            <div class="block" id="info-block"></div>
+            <button class="ok-button">Ok</button>
+        </div>
+        <div class="favorites">
+            <div class="wishlist">
+                <p id="wishlist-title"></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="downst">
+            <p>© 2025 digiverse.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>
