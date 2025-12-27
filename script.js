@@ -587,13 +587,17 @@ async function renderSingleProduct() {
         <div class="main-container" id="container-product-view">
             <div class="blockcont">
                 <img class="inner-photo" src="${product.image}">
-                    <p class="description">Характеристики</p>
-                    <p class="description">Об'єм пам'яті <span class="value">${product.memory} GB</span></p>
-                    <p class="description">Оперативна пам'ять <span class="value"> ${product.ram} GB</span></p>
-                    <p class="description">Дисплей <span class="value">${product.display}</span></p>
-                    <p class="description">Процесор <span class="value">${product.cpu}</span></p>
-                    <p class="description">Рік випуску <span class="value">${product.year}</span> </p>
+                <p class="description"><strong>Характеристики</strong></p>
+                
+                ${product.memory ? `<p class="description">Пам'ять: <span class="value">${product.memory} GB</span></p>` : ''}
+                ${product.ram ? `<p class="description">ОЗП: <span class="value">${product.ram} GB </span></p>` : ''}
+                ${product.display ? `<p class="description">Дисплей: <span class="value">${product.display}</span></p>` : ''}
+                ${product.cpu ? `<p class="description">Процесор: <span class="value">${product.cpu}</span></p>` : ''}
+                ${product.year ? `<p class="description">Рік: <span class="value">${product.year}</span></p>` : ''}
+                ${product.bluetooth ? `<p class="description">Bluetooth: <span class="value">${product.bluetooth}</span></p>` : ''}
+            
             </div>
+            
             <div class="blockcont" id="inner-second">    
                 <h1 class="inner-header">${product.name}</h1>
                 <p class="inner-price">${product.price} ₴</p> 
